@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Detection Application</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='mywebscript.js') }}" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <div class="logo-badge">
+                <span class="icon">🎭</span>
+                <span>IBM Watson NLP</span>
+            </div>
+            <h1>Emotion Detection AI</h1>
+            <p class="subtitle">Analyze text emotion with IBM Watson NLP & Flask</p>
+        </header>
+
+        <main class="card">
+            <div class="input-section">
+                <label for="textToAnalyze">Enter text for emotion analysis:</label>
+                <textarea 
+                    id="textToAnalyze" 
+                    name="textToAnalyze" 
+                    rows="4" 
+                    placeholder="Type or paste your text here (e.g., 'I am so happy that this project is complete!')..."
+                ></textarea>
+                
+                <button id="run-button" onclick="RunSentimentAnalysis()">
+                    <span>Analyze Emotion</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+            </div>
+
+            <div class="output-section">
+                <h3>Analysis Results</h3>
+                <div id="system_response" class="response-box">
+                    <p class="placeholder-text">Enter text above and click "Analyze Emotion" to see results.</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Developed with Python, Flask & IBM Watson NLP Framework</p>
+        </footer>
+    </div>
+</body>
+</html>
